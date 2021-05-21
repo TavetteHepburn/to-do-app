@@ -1,0 +1,114 @@
+/* UNIVERSAL STYLES*/
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+}
+
+.secondary-background {
+  background-color: #fffafa;
+}
+
+.tagline {
+  font-family: 'Quicksand', sans-serif;
+  color: #778899;
+  line-height: 125px;
+}
+
+
+/* HEADER */
+
+
+h1 {
+  margin: 0;
+  background-color: #4682b4;
+  line-height: 100px;
+  color: #f0e68c;
+}
+
+h2 {
+  margin: 10px;
+}
+
+/* APP CONTAINER (Child of Body - flex item children are .week and .reminders */
+
+.container {
+  border: 2px solid #fffafa;
+  display: flex;
+  /* the display property with a value of flex is setting the .container element as a block level flex container that takes up the full with of its parent body element. The child elements of the .container are flex items and they will change their size and position to fit in the .container element. */
+}
+
+/* TO DO SECTION */
+
+.week{
+display: inline-flex;
+/* creates an inline flex container which only takes the requires space for the content. children elements will change size and location to fit parent container. .row elements are the children of .week */
+flex-grow: 3; 
+/* will grow three times the size of its sibling element .reminder */
+flex-direction: column;
+/* specifies what direction element will be aligned in */
+
+}
+
+.row {
+min-height: 200px;
+display: flex;
+flex-wrap: wrap;
+/* flex-wrap applies to flex items only. wrapping becomes priority over shrinking. will only wrap if combined flex-basis value is greater that current size of the container. */
+justify-content: space-between;
+align-items: center;
+}
+
+.square {
+width: 125px;
+height: 125px;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.day.square {
+background-color: #4682b4;
+border: 1px solid #ffffff;
+}
+
+.task.square{
+background-color: khaki;
+border: 1px solid white;
+}
+
+.task p{
+font-family: 'Quicksand', sans-serif;
+font-weight: 700;
+font-size: 12px;
+}
+
+/* REMINDERS */
+
+.reminders {
+  background-color: khaki;
+  margin: 20px;
+  display: inline-flex;
+  flex-grow: 2;
+}
+
+.reminders h3 {
+  width: 100%;
+  margin: 10px;
+  color: black;
+  line-height: 90px;
+  font-size: 24px;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 24px;
+}
+
+
+
+
